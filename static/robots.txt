@@ -1,0 +1,7 @@
+# Disallow /sikeres-vasarlas/
+User-agent: *
+Disallow: /sikeres-vasarlas/
+
+# Rule X
+User-agent: *
+Allow: /

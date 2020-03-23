@@ -1,0 +1,39 @@
+.contactTitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  /* or 19px */
+
+  color: #191718;
+}
+
+.phoneNumber {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 130%;
+  /* identical to box height, or 25px */
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #37519c;
+}
+.email {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 130%;
+  /* identical to box height, or 17px */
+  letter-spacing: 0.01em;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #474145;
+}
+
+.featherSvg {
+  width: 18px;
+  height: 18px;
+  stroke: #C6BEC3;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}

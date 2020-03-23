@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* Created by András Gulácsi (@andrasgulacsi / salsaboy990) */
+
+// Update Bulma's global variables
+$family-sans-serif: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
+  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/title.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/breadcrumb.sass";
+@import "../../node_modules/bulma/sass/components/level.sass";
+@import "./base.scss";
+@import "./padding-margin.scss";
+@import "./media-queries.scss";
+@import "./snipcart.scss";
+
+
+.navbar-burger,
+.navbar-burger span {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.navbar-burger span {
+  width: 18px;
+  height: 1.5px;
+}
+
+.navbar-brand a.navbar-item:focus,
+.navbar-brand a.navbar-item:focus-within,
+.navbar-brand a.navbar-item:hover,
+.navbar-brand a.navbar-item.is-active {
+  color: white;
+}
+
+.bgWhite {
+  background: #f8f8ff;
+}
+
+.titleLarger {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 130%;
+  color: #191718;
+}
+
+@media (min-width: 1024px) {
+  a.navbar-item:focus,
+  a.navbar-item:focus-within,
+  a.navbar-item:hover,
+  a.navbar-item.is-active,
+  .navbar-link:focus,
+  .navbar-link:focus-within,
+  .navbar-link:hover,
+  .navbar-link.is-active {
+    color: #FFF;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,20 @@
+.bgPurple {
+  background: linear-gradient(180deg, #FFFFFF -209.16%, #6662B1 26.67%);
+}
+
+.title {
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 1023px) {
+  .title {
+    padding-left: 0px;
+  }
+}
+
+

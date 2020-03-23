@@ -1,0 +1,13 @@
+.followUsText {
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 130%;
+  /* identical to box height, or 17px */
+  
+  letter-spacing: 0.01em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  
+  color: #474145;
+}

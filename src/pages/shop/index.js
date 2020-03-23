@@ -2,21 +2,21 @@
 import { jsx, css } from "@emotion/core"
 // eslint-disable-next-line no-unused-vars
 import React from "react"
-import { Link } from "gatsby"
 import FeatherIcon from "feather-icons-react"
 
-import SEO from "../components/SEO"
-import TitleBar from "../components/title-bar/title-bar.js"
-import NavLink from "../components/nav-link/nav-link.js"
-import Breadcrumb from "../components/breadcrumb/breadcrumb.js"
-import ContactInfo from "../components/contact-info/contact-info.js"
-import FollowUs from "../components/follow-us/follow-us.js"
-import FooterBar from "../components/footer-bar/footer-bar.js"
+import SEO from "../../components/SEO"
+import TitleBar from "../../components/title-bar/title-bar.js"
+import NavLink from "../../components/nav-link/nav-link.js"
+import HeaderBar from "../../components/header-bar/header-bar.js"
+import ContactInfo from "../../components/contact-info/contact-info.js"
+import FollowUs from "../../components/follow-us/follow-us.js"
+import FooterBar from "../../components/footer-bar/footer-bar.js"
+import ProductFront from "../../components/product-front/product-front.js"
 
 export default () => {
   return (
     <>
-      <SEO title={`Landing oldal`} pathname={`/`}></SEO>
+      <SEO title={`Terméklista`} pathname={`/shop/`}></SEO>
       <TitleBar>
         <NavLink to="/shop">Terméklista</NavLink>
         <NavLink to="/gyakran-ismetelt-kerdesek/">
@@ -40,12 +40,8 @@ export default () => {
           </span>
         </NavLink>
       </TitleBar>
-
-      <div className="container mx-responsive mb1">
-        <h1 className={`titleLarger d-h1`}>Landing oldal jön ide...</h1>
-        <Link to="/shop/">Ugrás a SzlaVi Dance Shop-ra</Link>
-      </div>
-
+      <HeaderBar></HeaderBar>
+      <ProductFront></ProductFront>
       <ContactInfo>
         <FollowUs></FollowUs>
       </ContactInfo>

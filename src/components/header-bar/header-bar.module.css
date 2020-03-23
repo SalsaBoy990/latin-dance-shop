@@ -1,0 +1,21 @@
+.bgWhite {
+  background: #f8f8ff;
+}
+
+.introduction {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 100%;
+  /* identical to box height, or 11px */
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #3c3739;
+}

@@ -1,0 +1,15 @@
+.footerBg {
+  background: #fff5fb;
+  height: 56px;
+  
+}
+
+.footerElement {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 150%;
+  /* identical to box height, or 19px */
+  text-decoration-line: underline;
+  color: #474145;
+}

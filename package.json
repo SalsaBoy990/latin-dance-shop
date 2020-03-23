@@ -4,6 +4,7 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
+  "main": "src/styles/global.scss",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -11,12 +12,42 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url src/styles/global.scss src/styles/global.css",
+    "css-watch": "npm run css-build -- --watch"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@stripe/stripe-js": "^1.2.0",
+    "bulma": "^0.8.0",
+    "dotenv": "^8.2.0",
+    "feather-icons": "^4.26.0",
+    "feather-icons-react": "^0.4.1",
+    "framer-motion": "^1.10.0",
     "gatsby": "^2.19.45",
+    "gatsby-image": "^2.2.44",
+    "gatsby-plugin-accessibilityjs": "^1.0.3",
+    "gatsby-plugin-google-analytics": "^2.1.38",
+    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-offline": "^3.0.41",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-sass": "^2.1.31",
+    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-snipcartv3": "^2.0.3",
+    "gatsby-plugin-transition-link": "^1.18.0",
+    "gatsby-remark-images": "^3.1.50",
+    "gatsby-source-filesystem": "^2.1.56",
+    "gatsby-transformer-remark": "^2.6.59",
+    "gatsby-transformer-sharp": "^2.3.19",
+    "gsap": "^3.2.4",
+    "minimist": "^1.2.5",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.1.3",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

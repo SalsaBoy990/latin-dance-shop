@@ -16,7 +16,7 @@ import FooterBar from "../components/footer-bar/footer-bar.js"
 export default () => {
   return (
     <>
-      <SEO title={`Landing oldal`} pathname={`/`}></SEO>
+      <SEO title={`Adatkezelés`} pathname={`/adatkezeles/`}></SEO>
       <TitleBar>
         <NavLink to="/shop">Terméklista</NavLink>
         <NavLink to="/gyakran-ismetelt-kerdesek/">
@@ -40,10 +40,17 @@ export default () => {
           </span>
         </NavLink>
       </TitleBar>
+      <div className={`bgWhite mt1 mb1`}>
+        <div className={`container mx-responsive`}>
+          <Breadcrumb>
+            <Link to="/adatkezeles/">Adatkezelés</Link>
+          </Breadcrumb>
+          <h1 className={`titleLarger d-h1`}>Adatkezelés</h1>
+        </div>
+      </div>
 
       <div className="container mx-responsive mb1">
-        <h1 className={`titleLarger d-h1`}>Landing oldal jön ide...</h1>
-        <Link to="/shop/">Ugrás a SzlaVi Dance Shop-ra</Link>
+        <p>Az adatkezelési tájékoztató feltöltés alatt...</p>
       </div>
 
       <ContactInfo>

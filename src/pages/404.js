@@ -16,7 +16,11 @@ import FooterBar from "../components/footer-bar/footer-bar.js"
 export default () => {
   return (
     <>
-      <SEO title={`Landing oldal`} pathname={`/`}></SEO>
+      <SEO
+        title={`Az oldal nem található`}
+        pathname={`/404/`}
+        description={`Az általad keresett oldal nem létezik. Menj a terméklista oldalra, ahol az összes aktuális bérlet elérhető.`}
+      ></SEO>
       <TitleBar>
         <NavLink to="/shop">Terméklista</NavLink>
         <NavLink to="/gyakran-ismetelt-kerdesek/">
@@ -40,10 +44,18 @@ export default () => {
           </span>
         </NavLink>
       </TitleBar>
+      <div className={`bgWhite mt1 mb1`}>
+        <div className={`container mx-responsive`}>
+          <Breadcrumb>
+            <Link to="/404/">Az oldal nem található</Link>
+          </Breadcrumb>
+          <h1 className={`titleLarger d-h1`}>Az oldal nem található</h1>
+        </div>
+      </div>
 
       <div className="container mx-responsive mb1">
-        <h1 className={`titleLarger d-h1`}>Landing oldal jön ide...</h1>
-        <Link to="/shop/">Ugrás a SzlaVi Dance Shop-ra</Link>
+        <p className="mbhalf">Az oldal nem található.</p>
+        <Link to="/shop/">Ugrás a terméklistára</Link>
       </div>
 
       <ContactInfo>

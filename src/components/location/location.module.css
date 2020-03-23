@@ -1,0 +1,40 @@
+.locationText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 165%;
+  /* or 18px */
+
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" on, "lnum" on;
+
+  color: #3c3739;
+}
+
+a.locationName {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 165%;
+  /* identical to box height, or 25px */
+
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
+  font-feature-settings: "tnum" on, "lnum" on;
+
+  color: #4e4b92;
+}
+
+.address {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 165%;
+  /* or 21px */
+
+  letter-spacing: 0.01em;
+  font-feature-settings: "tnum" on, "lnum" on;
+
+  color: #474145;
+}
