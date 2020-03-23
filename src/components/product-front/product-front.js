@@ -60,7 +60,7 @@ const ProductFront = () => {
               background: linear-gradient(
                 180deg,
                 #ffffff -24.38%,
-                #ffedf7 100%
+                #EAF0E6 100%
               );
             `}
           >

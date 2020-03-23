@@ -1,7 +1,7 @@
 .snipcart {
   font-family: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #313332;
@@ -26,8 +26,8 @@
 .snipcart__font--secondary,
 .snipcart__font--subtitle {
   font-family: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .snipcart__font--tiny {
   font-size: 12px;
@@ -187,8 +187,7 @@
   min-height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  // z-index: 10; changed to above navbar!
-  z-index: 31;
+  z-index: 10;
   background-color: #f0f5f6;
 }
 .snipcart-modal__overlay {
@@ -271,8 +270,8 @@
   text-decoration: none;
   color: #52bcf8;
   font-family: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   border: none;
   background-color: transparent;
@@ -627,7 +626,8 @@
   .snipcart-cart-header {
     padding-right: 0;
     padding-left: 0;
-    z-index: auto;
+    // z-index: auto;
+    z-index: 31;
     height: auto;
     position: relative;
     padding: 32px 16px;
@@ -1729,8 +1729,8 @@
   padding: 0;
   color: #313332;
   font-family: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   padding: 3.6px 0;
 }

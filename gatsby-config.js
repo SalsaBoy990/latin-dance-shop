@@ -94,11 +94,11 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true, // Print removed selectors and processed file names
-        develop: false, // Enable while using `gatsby develop`
+        develop: true, // Enable while using `gatsby develop`
         // tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
-        // ignore: ['/src/components/title-bar', '/src/components/follow-us'], // Ignore files/folders
-        // purgeOnly: ["/src/styles/global.css"], // Purge only these files/folders
+        ignore: ['/src/styles/snipcart.scss'], // Ignore files/folders
+        purgeOnly: ["/src/styles/global.css"], // Purge only these files/folders
       },
     },
   ],

@@ -17,14 +17,15 @@ import Location from "../components/location/location.js"
 import ContactInfo from "../components/contact-info/contact-info.js"
 import FollowUs from "../components/follow-us/follow-us.js"
 import FooterBar from "../components/footer-bar/footer-bar.js"
+
 import ProductFrontStyles from "../components/product-front/product-front.module.css"
 
 export default ({ data }) => {
   const product = data.my_products
 
   useEffect(() => {
-    // console.log(window)
-    // console.log(window.Snipcart)
+    console.log(window.Snipcart)
+
     document.addEventListener("snipcart.ready", () => {
       window.Snipcart.api.session.setLanguage("hu", {
         checkout: {
@@ -102,8 +103,8 @@ export default ({ data }) => {
               position: relative;
             `}
           />
-          <div
-            className="snipcart-items-count"
+          {/* <div
+            className="snipcart-cart-header__count"
             css={css`
               color: #f20b97;
               font-size: 13px;
@@ -113,8 +114,7 @@ export default ({ data }) => {
               right: 6px;
             `}
           >
-            0
-          </div>
+          </div> */}
         </button>
       </TitleBar>
 
@@ -140,7 +140,7 @@ export default ({ data }) => {
           className={`mb1 columns ${ProductFrontStyles.productContainer} is-mobile mr0`}
           css={css`
             max-width: 500px;
-            background: linear-gradient(180deg, #ffffff -24.38%, #ffedf7 100%);
+            background: linear-gradient(180deg, #ffffff -24.38%, #eaf0e6 100%);
           `}
         >
           <div className={`column is-narrow`}>
