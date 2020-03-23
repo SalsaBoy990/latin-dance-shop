@@ -5,17 +5,14 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Gatsby plus Snipcart V3 Webshop
 </h1>
 
 README WILL BE UPDATED SOON...
-This is a simple webshop created with Gatsby and Snipcart V3. Not production-ready yet. I will add Netlify CMS to manage the product's data in markdown.
+This is a simple webshop created with Gatsby and Snipcart V3. Not production-ready yet. I will add Netlify CMS to manage the product's data in markdown. Or maybe I will try out TinaCMS.
 
 PS. The site language is in Hungarian. It will be used by a local client. The code and comments are in English.
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
 
