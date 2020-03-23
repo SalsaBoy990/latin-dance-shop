@@ -272,7 +272,7 @@ export default ({ data }) => {
               data-item-url={product.fields.slug}
               data-item-name={product.frontmatter.title}
               data-item-image={product.frontmatter.coverImage.publicURL}
-              data-item-description={product.frontmatter.description}
+              data-item-description={`${product.frontmatter.description}, ${product.frontmatter.date}`}
               data-item-taxable={false}
             >
               <motion.span

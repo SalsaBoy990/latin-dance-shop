@@ -40,10 +40,11 @@ export default () => {
           </span>
         </NavLink>
       </TitleBar>
-
-      <div className="container mx-responsive mb1">
-        <h1 className={`titleLarger d-h1`}>Landing oldal jön ide...</h1>
-        <Link to="/shop/">Ugrás a SzlaVi Dance Shop-ra</Link>
+      <div className={`bgWhite mt1 mb1`}>
+        <div className="container mx-responsive mb1">
+          <h1 className={`titleLarger d-h1 mb1`}>Landing oldal jön ide...</h1>
+          <Link to="/shop/">Ugrás a SzlaVi Dance Shop-ra</Link>
+        </div>
       </div>
 
       <ContactInfo>
