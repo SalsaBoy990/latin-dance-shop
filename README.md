@@ -11,7 +11,7 @@
 README WILL BE UPDATED SOON...
 This is a simple webshop created with Gatsby and Snipcart V3. Not production-ready yet. I will add Netlify CMS to manage the product's data in markdown. Or maybe I will try out TinaCMS.
 
-PS. The site language is in Hungarian. It will be used by a local client. The code and comments are in English.
+PS. The site language is in Hungarian. It will be used by a local client.
 
 
 ## 🚀 Quick start
