@@ -12,7 +12,7 @@ module.exports = {
     shortTitle: `SzlaVi Dance—webshop`,
     author: `SzlaVi Dance Art`,
     description: `Webshop bérletvásárlás. Gyere és tanulj nálunk bachatát. `,
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://szlavi-dance-shop.netlify.com`,
     tel: `06 30 260 64 11`,
     email: `szlavidanceart@gmail.com`,
     facebook: `https://www.facebook.com/szlavidanceart/`,
