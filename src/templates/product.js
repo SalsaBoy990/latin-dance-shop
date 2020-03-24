@@ -17,6 +17,7 @@ import Location from "../components/location/location.js"
 import ContactInfo from "../components/contact-info/contact-info.js"
 import FollowUs from "../components/follow-us/follow-us.js"
 import FooterBar from "../components/footer-bar/footer-bar.js"
+import SafePayment from "../components/safe-payment/safe-payment.js"
 
 import ProductFrontStyles from "../components/product-front/product-front.module.css"
 
@@ -118,7 +119,7 @@ export default ({ data }) => {
         </button>
       </TitleBar>
 
-      <div className={`${ProductFrontStyles.bgWhite} mt1 mb1`}>
+      <div className={`${ProductFrontStyles.bgWhite} mb1`} css={css`padding-top: 30px; padding-bottom: 15px;`}>
         <div className={`container mx-responsive`}>
           <Breadcrumb>
             <Link to={product.fields.slug}>{product.frontmatter.title}</Link>
@@ -129,13 +130,13 @@ export default ({ data }) => {
         </div>
       </div>
 
-      <div className="container mx-responsive mb1">
+      <div className="container mx-responsive" css={css`margin-bottom: 30px;`}>
         <p className={ProductFrontStyles.productDescription}>
           {product.frontmatter.description}
         </p>
       </div>
 
-      <div className="container mr-responsive ml-responsive m-mr0">
+      <div className="container mr-responsive ml-responsive m-mr0 mt1">
         <div
           className={`mb1 columns ${ProductFrontStyles.productContainer} is-mobile mr0`}
           css={css`
@@ -244,6 +245,7 @@ export default ({ data }) => {
           className="columns"
           css={css`
             max-width: 500px;
+            padding-top: 30px;
           `}
         >
           <div
@@ -335,8 +337,10 @@ export default ({ data }) => {
         </div>
       </Container>
 
+      <SafePayment></SafePayment>
+
       <ContactInfo>
-        <FollowUs></FollowUs>
+      <FollowUs></FollowUs>
       </ContactInfo>
 
       <FooterBar></FooterBar>

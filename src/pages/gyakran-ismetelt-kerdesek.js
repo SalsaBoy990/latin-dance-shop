@@ -41,14 +41,14 @@ const Gyik = () => {
           </span>
         </NavLink>
       </TitleBar>
-      <div className={`bgWhite mt1 mb1`}>
+      <div className={`bgWhite mb1`} css={css`padding-top: 30px;`}>
         <div className={`container mx-responsive`}>
           <Breadcrumb>
             <Link to="/gyakran-ismetelt-kerdesek/">
               Gyakran ismételt kérdések
             </Link>
           </Breadcrumb>
-          <h1 className={`titleLarger d-h1`}>Gyakran ismételt kérdések</h1>
+          <h1 className={`titleLarger d-h1 pbhalf`}>Gyakran ismételt kérdések</h1>
         </div>
       </div>
 

@@ -106,6 +106,7 @@ export default () => {
       </TitleBar>
       <HeaderBar></HeaderBar>
       <ProductFront></ProductFront>
+
       <ContactInfo>
         <FollowUs></FollowUs>
       </ContactInfo>

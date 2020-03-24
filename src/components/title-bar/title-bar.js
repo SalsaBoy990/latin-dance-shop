@@ -33,6 +33,7 @@ const TitleBar = ({ children }) => {
   })
 
   return (
+    <div className="">
     <header>
       <motion.div
         animate={{ height: clicked ? "148px" : "52px" }}
@@ -86,6 +87,7 @@ const TitleBar = ({ children }) => {
         </div>
       </motion.div>
     </header>
+    </div>
   )
 }
 

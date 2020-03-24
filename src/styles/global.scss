@@ -6,6 +6,9 @@ $family-sans-serif: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI"
   "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
   "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
+@import "./base.scss";
+@import "./padding-margin.scss";
+
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
 @import "../../node_modules/bulma/sass/grid/_all.sass";
@@ -15,10 +18,8 @@ $family-sans-serif: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI"
 @import "../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../node_modules/bulma/sass/components/breadcrumb.sass";
 @import "../../node_modules/bulma/sass/components/level.sass";
-@import "./base.scss";
-@import "./padding-margin.scss";
-@import "./media-queries.scss";
 
+@import "./media-queries.scss";
 
 .navbar-burger,
 .navbar-burger span {
@@ -57,7 +58,7 @@ $family-sans-serif: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI"
   .navbar-link:focus-within,
   .navbar-link:hover,
   .navbar-link.is-active {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
   }
 }

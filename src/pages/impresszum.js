@@ -40,12 +40,12 @@ export default () => {
           </span>
         </NavLink>
       </TitleBar>
-      <div className={`bgWhite mt1 mb1`}>
+      <div className={`bgWhite mb1`} css={css`padding-top: 30px;`}>
         <div className={`container mx-responsive`}>
           <Breadcrumb>
             <Link to="/impresszum/">Impresszum</Link>
           </Breadcrumb>
-          <h1 className={`titleLarger d-h1`}>Impresszum</h1>
+          <h1 className={`titleLarger d-h1 pbhalf`}>Impresszum</h1>
         </div>
       </div>
 
