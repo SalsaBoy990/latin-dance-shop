@@ -53,6 +53,11 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -80,7 +85,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-//  `gatsby-plugin-offline`,
+    //  `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-snipcartv3",
       options: {
@@ -97,7 +102,7 @@ module.exports = {
         develop: true, // Enable while using `gatsby develop`
         // tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
-        ignore: ['/src/styles/snipcart.scss'], // Ignore files/folders
+        ignore: ["/src/styles/snipcart.scss"], // Ignore files/folders
         purgeOnly: ["/src/styles/global.css"], // Purge only these files/folders
       },
     },
