@@ -75,7 +75,7 @@ const SEO = ({
       {seo.image && <meta name="twitter:image" content={seo.image} />}
 
       <meta name="twitter:creator" content={mySiteData.author} />
-      
+      {pathname === "/" ?  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>: ""}
     </Helmet>
   )
 }
