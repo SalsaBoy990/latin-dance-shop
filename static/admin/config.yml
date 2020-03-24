@@ -38,4 +38,4 @@ collections:
       - { label: "Hány fő részére?", name: "recipients" , widget: "number", valueType: "int", min: 1, max: 2, required: true }
       - { label: "Facebook eseménylink", name: "facebook_event" , widget: "string", required: true }
       - { label: "Borítókép", name: "coverImage" , widget: "image", required: true }
-      - { label: "Aktív termék (megjelenik", name: "active" , widget: "Boolean", default: true, required: true }
+      - { label: "Aktív termék (megjelenik", name: "active" , widget: "boolean", default: true, required: true }
