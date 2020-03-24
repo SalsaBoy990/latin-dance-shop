@@ -25,7 +25,7 @@ export default ({ data }) => {
   const product = data.my_products
 
   useEffect(() => {
-    console.log(window.Snipcart)
+    // console.log(window.Snipcart)
 
     document.addEventListener("snipcart.ready", () => {
       window.Snipcart.api.session.setLanguage("hu", {
@@ -35,6 +35,34 @@ export default ({ data }) => {
         },
       })
     })
+
+    let weeks = document.getElementById("validInWeeks").innerText
+    const numWeeks = parseInt(weeks, 10)
+    if (isNaN(numWeeks)) {
+      throw new Error("The valid number of weeks is not a number. Check your markdown files.")
+    }
+
+    let validDate = new Date()
+    validDate.setDate(validDate.getDate() + numWeeks * 7)
+    // console.log(validDate)
+   
+    const zeroMonth =
+      validDate.getMonth() + 1 < 10
+        ? "0" + (validDate.getMonth() + 1).toString()
+        : (validDate.getMonth() + 1).toString()
+    const zeroDate =
+      validDate.getDate() < 10
+        ? "0" + (validDate.getDate()).toString()
+        : (validDate.getDate()).toString()
+
+    document.getElementById("validDate").innerText =
+      "Érv.: " +
+      validDate.getFullYear() +
+      ". " +
+      zeroMonth +
+      ". " +
+      zeroDate +
+      ".-ig"
   })
 
   return (
@@ -119,7 +147,13 @@ export default ({ data }) => {
         </button>
       </TitleBar>
 
-      <div className={`${ProductFrontStyles.bgWhite} mb1`} css={css`padding-top: 30px; padding-bottom: 15px;`}>
+      <div
+        className={`${ProductFrontStyles.bgWhite} mb1`}
+        css={css`
+          padding-top: 30px;
+          padding-bottom: 15px;
+        `}
+      >
         <div className={`container mx-responsive`}>
           <Breadcrumb>
             <Link to={product.fields.slug}>{product.frontmatter.title}</Link>
@@ -130,7 +164,12 @@ export default ({ data }) => {
         </div>
       </div>
 
-      <div className="container mx-responsive" css={css`margin-bottom: 30px;`}>
+      <div
+        className="container mx-responsive"
+        css={css`
+          margin-bottom: 30px;
+        `}
+      >
         <p className={ProductFrontStyles.productDescription}>
           {product.frontmatter.description}
         </p>
@@ -232,8 +271,10 @@ export default ({ data }) => {
               >{` Ft,– / ${product.frontmatter.recipients} fő`}</span>
             </span>
             <span
+              id="validDate"
               className={`${ProductFrontStyles.productOccasions} is-block`}
-            >{`Érv.: ${product.frontmatter.valid}-ig`}</span>
+            ></span>
+            <span id="validInWeeks" css={css`display: none; height: 0; width: 0;`}>{product.frontmatter.valid}</span>
           </div>
         </div>
       </div>
@@ -340,7 +381,7 @@ export default ({ data }) => {
       <SafePayment></SafePayment>
 
       <ContactInfo>
-      <FollowUs></FollowUs>
+        <FollowUs></FollowUs>
       </ContactInfo>
 
       <FooterBar></FooterBar>
@@ -363,8 +404,8 @@ export const query = graphql`
         price
         recipients
         occasions
-        valid(locale: "hu", formatString: "YYYY. MM. DD.")
         facebook_event
+        valid
         coverImage {
           publicURL
           childImageSharp {

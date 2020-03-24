@@ -5,7 +5,7 @@ description: >-
 date: "Hétfő 19:30–21:00"
 price: 4800
 occasions: 4
-valid: "2020-05-01"
+valid: 6
 recipients: 1
 facebook_event: "https://www.facebook.com/events/900492787052074/"
 coverImage: "../images/dominikai-bachata.jpg"

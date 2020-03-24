@@ -5,7 +5,7 @@ description: >-
 date: "Szerda 18:00–19:20"
 price: 4800
 occasions: 4
-valid: "2020-05-01"
+valid: 5
 recipients: 2
 facebook_event: "https://www.facebook.com/events/900492787052074/"
 coverImage: "../images/sensual-bachata.jpg"

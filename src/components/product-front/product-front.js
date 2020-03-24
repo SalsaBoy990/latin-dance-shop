@@ -31,7 +31,7 @@ const ProductFront = () => {
               occasions
               price
               recipients
-              valid(locale: "hu", formatString: "YYYY. MM. DD.")
+              valid
               facebook_event
               coverImage {
                 childImageSharp {

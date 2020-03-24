@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# Nyilvánosságra hozás módja (piszkozat- lektorálás alatt - kész)
+publish_mode: editorial_workflow
+
+# A képeket ide tölti fel
+media_folder: "src/images/uploads"
+# És ide kerülnek
+public_folder: "static/images/uploads"
+
+
+# A bejelentkezés képernyő logója
+logo_url: https://szlavi-dance-shop.netlify.com/szlavi_logo_transparent.png
+
+site_url: https://szlavi-dance-shop.netlify.com/shop/
+
+# Nyelv beállítása
+locale: "hu"
+
+# Gyűjtemények (adat)
+collections:
+  - name: "products"
+    label: "Termékek"
+    description: >
+      Itt adhatsz hozzá új termékeket a listádhoz, vagy módosíthatod, illetve törölheted a meglévőket.
+    folder: "src/products/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Termék neve", name: "title" , widget: "string", required: true }
+      - { label: "Rövid leírás", name: "description" , widget: "text", required: true }
+      - { label: "Időpont (a hét napja, mettől meddig)", name: "string" , widget: "string", required: true }
+      - { label: "Ár", name: "price" , widget: "number", valueType: "int", default: 4800, min: 1000, step: 100, required: true }
+      - { label: "Alkalmak száma", name: "occasions" , widget: "number", valueType: "int", min: 1, required: true }
+      - { label: "Hány hétig érvényes?", name: "valid" , widget: "number", valueType: "int", default: 5, min: 5, max: 6, required: true }
+      - { label: "Hány fő részére?", name: "recipients" , widget: "number", valueType: "int", min: 1, max: 2, required: true }
+      - { label: "Facebook eseménylink", name: "facebook_event" , widget: "string", required: true }
+      - { label: "Borítókép", name: "coverImage" , widget: "image", required: true }
+      - { label: "Aktív termék (megjelenik", name: "active" , widget: "Boolean", default: true, required: true }
