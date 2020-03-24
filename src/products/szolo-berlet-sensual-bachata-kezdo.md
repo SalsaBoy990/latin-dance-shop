@@ -8,7 +8,7 @@ occasions: 4
 valid: 5
 recipients: 1
 facebook_event: "https://www.facebook.com/events/900492787052074/"
-coverImage: "../images/sensual-bachata.jpg"
+cover_image: "../images/uploads/sensual-bachata.jpg"
 active: true
 ---
 

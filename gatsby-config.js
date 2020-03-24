@@ -36,6 +36,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images/uploads`, //path to your media-folder
+        name: "media"
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
@@ -55,9 +62,7 @@ module.exports = {
         plugins: [
           // gatsby-remark-relative-images must
           // go before gatsby-remark-images
-          {
-            resolve: `gatsby-remark-relative-images`,
-          },
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {

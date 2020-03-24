@@ -33,7 +33,7 @@ const ProductFront = () => {
               recipients
               valid
               facebook_event
-              coverImage {
+              cover_image {
                 childImageSharp {
                   fixed(width: 135) {
                     ...GatsbyImageSharpFixed
@@ -68,7 +68,7 @@ const ProductFront = () => {
               <div className={`column is-narrow`}>
                 <Link to={node.fields.slug}>
                   <Img
-                    fixed={node.frontmatter.coverImage.childImageSharp.fixed}
+                    fixed={node.frontmatter.cover_image.childImageSharp.fixed}
                     alt={`${node.frontmatter.title} borító`}
                   />
                 </Link>

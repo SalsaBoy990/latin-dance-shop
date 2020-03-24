@@ -195,7 +195,7 @@ export default ({ data }) => {
                 rel="noreferrer noopener"
               >
                 <Img
-                  fixed={product.frontmatter.coverImage.childImageSharp.fixed}
+                  fixed={product.frontmatter.cover_image.childImageSharp.fixed}
                   alt={`${product.frontmatter.title} borító`}
                 />
                 <div
@@ -314,7 +314,7 @@ export default ({ data }) => {
               data-item-max-quantity={product.frontmatter.recipients}
               data-item-url={product.fields.slug}
               data-item-name={product.frontmatter.title}
-              data-item-image={product.frontmatter.coverImage.publicURL}
+              data-item-image={product.frontmatter.cover_image.publicURL}
               data-item-description={`${product.frontmatter.description}, ${product.frontmatter.date}`}
               data-item-taxable={false}
             >
@@ -406,7 +406,7 @@ export const query = graphql`
         occasions
         facebook_event
         valid
-        coverImage {
+        cover_image {
           publicURL
           childImageSharp {
             fixed(width: 135) {

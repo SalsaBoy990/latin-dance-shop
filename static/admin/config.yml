@@ -1,15 +1,3 @@
-    let year = validDate.getFullYear()
-    let month = validDate.getMonth()
-    let day = validDate.getDate()
-
-    function isItLeapYear(year) {
-      return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0) ? 1 : 0
-    }
-
-    // get days in month in different scenarios
-    let daysInMonth
-    if (month === 1) {
-      daysInMonth = 28 + isItLeapYear(year)
 backend:
   name: git-gateway
   branch: master
