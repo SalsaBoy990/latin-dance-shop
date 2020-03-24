@@ -1,3 +1,15 @@
+    let year = validDate.getFullYear()
+    let month = validDate.getMonth()
+    let day = validDate.getDate()
+
+    function isItLeapYear(year) {
+      return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0) ? 1 : 0
+    }
+
+    // get days in month in different scenarios
+    let daysInMonth
+    if (month === 1) {
+      daysInMonth = 28 + isItLeapYear(year)
 backend:
   name: git-gateway
   branch: master
@@ -8,7 +20,7 @@ publish_mode: editorial_workflow
 # A képeket ide tölti fel
 media_folder: "src/images/uploads"
 # És ide kerülnek
-public_folder: "static/images/uploads"
+public_folder: "static/images"
 
 
 # A bejelentkezés képernyő logója
@@ -31,11 +43,11 @@ collections:
     fields:
       - { label: "Termék neve", name: "title" , widget: "string", required: true }
       - { label: "Rövid leírás", name: "description" , widget: "text", required: true }
-      - { label: "Időpont (a hét napja, mettől meddig)", name: "string" , widget: "string", required: true }
+      - { label: "Időpont (a hét napja, mettől meddig)", name: "date" , widget: "string", required: true }
       - { label: "Ár", name: "price" , widget: "number", valueType: "int", default: 4800, min: 1000, step: 100, required: true }
       - { label: "Alkalmak száma", name: "occasions" , widget: "number", valueType: "int", min: 1, required: true }
       - { label: "Hány hétig érvényes?", name: "valid" , widget: "number", valueType: "int", default: 5, min: 5, max: 6, required: true }
       - { label: "Hány fő részére?", name: "recipients" , widget: "number", valueType: "int", min: 1, max: 2, required: true }
       - { label: "Facebook eseménylink", name: "facebook_event" , widget: "string", required: true }
       - { label: "Borítókép", name: "coverImage" , widget: "image", required: true }
-      - { label: "Aktív termék (megjelenik", name: "active" , widget: "boolean", default: true, required: true }
+      - { label: "Aktív termék (megjelenik)", name: "active" , widget: "boolean", default: true, required: true }
