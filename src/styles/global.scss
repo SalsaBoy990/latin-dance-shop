@@ -62,3 +62,44 @@ $family-sans-serif: "Encode Sans", BlinkMacSystemFont, -apple-system, "Segoe UI"
     text-decoration: none;
   }
 }
+
+.login-wrapper {
+  padding-top: 15px;
+  font-size: 15px;
+  color: transparent;
+}
+
+.login-wrapper > a:first-child {
+  padding: 13px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #ffffff 0%, #d4f8be 100%);
+  border: none;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  color: #474145;
+  cursor: pointer;
+}
+
+.login-wrapper > a:first-child:hover {
+  background: linear-gradient(360deg, #ffffff -150.22%, #f20b97 88.03%);
+  color: #fff;
+}
+
+.open-cart-btn {
+  position: relative;
+  margin-top: 4px;
+  height: 44px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #ffffff 0%, #d4f8be 100%);
+  border: none;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  color: #474145;
+  cursor: pointer;
+}
+
+.open-cart-btn:hover {
+  background: linear-gradient(360deg, #ffffff -150.22%, #f20b97 88.03%);
+  color: #fff;
+}
+

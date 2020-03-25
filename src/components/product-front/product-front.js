@@ -16,7 +16,7 @@ const ProductFront = () => {
       allMarkdownRemark(
         sort: { fields: frontmatter___price, order: ASC }
         limit: 10
-        filter: {frontmatter: {active: {eq: true}}}
+        filter: { frontmatter: { active: { eq: true } } }
       ) {
         edges {
           node {
@@ -57,11 +57,7 @@ const ProductFront = () => {
             key={node.id}
             className={`mb1 column ${ProductFrontStyles.productContainer} mrhalf m-mr0`}
             css={css`
-              background: linear-gradient(
-                180deg,
-                #ffffff -24.38%,
-                #EAF0E6 100%
-              );
+              background: linear-gradient(180deg, #ffffff -24.38%, #eee 100%);
             `}
           >
             <div className={`columns is-mobile`}>
@@ -93,8 +89,6 @@ const ProductFront = () => {
                       @media (max-width: 768px) {
                         width: 100%;
                       }
-
-                      
                     `}
                   >
                     <AniLink

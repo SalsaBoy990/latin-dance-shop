@@ -12,7 +12,34 @@
   "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
   "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
     }
+
+    section > button {
+      font-size: 15px;
+      background-color: #F20B97 !important;
+    }
+    section > button:hover {
+      background-color: #a60866 !important;
+    }
+
+    section {
+      background: #eee;
+
+    }
+
+    section > span:first-child {
+      margin-top: -200px;
+      width: 200px;
+      margin-bottom: 60px;
+    }
+
+    img {
+      margin: auto 0;
+      width: 200px;
+      height: 200px;
+    }
+
   </style>
+
   <!-- include the widget -->
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -20,6 +47,9 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   
+
   <script src="/identity.js"></script>
+
+
 </body>
 </html>

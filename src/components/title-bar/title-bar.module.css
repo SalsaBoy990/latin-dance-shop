@@ -17,4 +17,32 @@
   }
 }
 
+.navLink {
+  font-size: 15px;
+  color: #deddff;
+}
+.navLink:hover {
+  color: #fff;
+  text-decoration: underline !important;
+  transition: 0.45s;
+}
+
+@media (max-width: 1023px) {
+  .navLink {
+    color: #474145;
+  }
+  .navLink:hover {
+    color: #fff;
+  }
+}
+
+.navLink .is-active {
+  color: #eee !important;
+}
+.navLink .is-active:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+
 

@@ -1,10 +1,14 @@
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { motion } from "framer-motion"
+import FeatherIcon from "feather-icons-react"
 
 import TitleBarStyles from "./title-bar.module.css"
 
-const TitleBar = ({ children }) => {
+const TitleBar = ({ children, path }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -33,7 +37,6 @@ const TitleBar = ({ children }) => {
   })
 
   return (
-    <div className="">
     <header>
       <motion.div
         animate={{ height: clicked ? "148px" : "52px" }}
@@ -81,13 +84,46 @@ const TitleBar = ({ children }) => {
               id="navbarBasicExample"
               className={"navbar-menu" + (clicked ? " is-active" : "")}
             >
+              <div className="navbar-start">
+                <Link
+                  to="/shop"
+                  className={`navbar-item ${TitleBarStyles.navLink}`}
+                  activeClassName={"navbar-item is-active"}
+                >
+                  Terméklista
+                </Link>
+                <Link
+                  to="/gyakran-ismetelt-kerdesek/"
+                  className={`navbar-item ${TitleBarStyles.navLink}`}
+                  activeClassName={"navbar-item is-active"}
+                >
+                  <span>
+                    <FeatherIcon
+                      icon="help-circle"
+                      css={css`
+                        width: 18px;
+                        height: 18px;
+                        stroke: #c5c2ff;
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        fill: none;
+                        margin-right: 2px;
+                        top: 3px;
+                        position: relative;
+                      `}
+                    />
+                    Gyakran ismételt kérdések
+                  </span>
+                </Link>
+              </div>
+
               <div className="navbar-end">{children}</div>
             </div>
           </nav>
         </div>
       </motion.div>
     </header>
-    </div>
   )
 }
 

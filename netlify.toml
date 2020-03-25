@@ -1,0 +1,9 @@
+[dev]
+  base    = ""
+  publish = "public"
+  command = "npm run build"
+  port    =  9000
+[build]
+  base    = ""
+  publish = "public"
+  command = "npm run build"

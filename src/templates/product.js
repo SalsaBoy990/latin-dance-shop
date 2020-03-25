@@ -11,7 +11,6 @@ import FeatherIcon from "feather-icons-react"
 import SEO from "../components/SEO"
 import Container from "../components/container/container"
 import TitleBar from "../components/title-bar/title-bar.js"
-import NavLink from "../components/nav-link/nav-link.js"
 import Breadcrumb from "../components/breadcrumb/breadcrumb.js"
 import Location from "../components/location/location.js"
 import ContactInfo from "../components/contact-info/contact-info.js"
@@ -39,21 +38,23 @@ export default ({ data }) => {
     let weeks = document.getElementById("validInWeeks").innerText
     const numWeeks = parseInt(weeks, 10)
     if (isNaN(numWeeks)) {
-      throw new Error("The valid number of weeks is not a number. Check your markdown files.")
+      throw new Error(
+        "The valid number of weeks is not a number. Check your markdown files."
+      )
     }
 
     let validDate = new Date()
     validDate.setDate(validDate.getDate() + numWeeks * 7)
     // console.log(validDate)
-   
+
     const zeroMonth =
       validDate.getMonth() + 1 < 10
         ? "0" + (validDate.getMonth() + 1).toString()
         : (validDate.getMonth() + 1).toString()
     const zeroDate =
       validDate.getDate() < 10
-        ? "0" + (validDate.getDate()).toString()
-        : (validDate.getDate()).toString()
+        ? "0" + validDate.getDate().toString()
+        : validDate.getDate().toString()
 
     document.getElementById("validDate").innerText =
       "Érv.: " +
@@ -73,39 +74,7 @@ export default ({ data }) => {
         description={product.frontmatter.description}
       ></SEO>
       <TitleBar>
-        <NavLink to="/shop">Terméklista</NavLink>
-        <NavLink to="/gyakran-ismetelt-kerdesek/">
-          <span>
-            <FeatherIcon
-              icon="help-circle"
-              css={css`
-                width: 18px;
-                height: 18px;
-                stroke: #c5c2ff;
-                stroke-width: 2;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                fill: none;
-                margin-right: 2px;
-                top: 3px;
-                position: relative;
-              `}
-            />
-            Gyakran ismételt kérdések
-          </span>
-        </NavLink>
-        <button
-          className="snipcart-checkout"
-          css={css`
-            position: relative;
-            background-color: #d4f8be;
-            border: none;
-            box-shadow: none;
-            font-size: 15px;
-            color: #474145;
-            cursor: pointer;
-          `}
-        >
+        <button className="snipcart-checkout open-cart-btn">
           <span
             className="is-inline-block"
             css={css`
@@ -120,7 +89,6 @@ export default ({ data }) => {
             css={css`
               width: 18px;
               height: 18px;
-              stroke: #474145;
               stroke-width: 1.5;
               stroke-linecap: round;
               stroke-linejoin: round;
@@ -180,7 +148,7 @@ export default ({ data }) => {
           className={`mb1 columns ${ProductFrontStyles.productContainer} is-mobile mr0`}
           css={css`
             max-width: 500px;
-            background: linear-gradient(180deg, #ffffff -24.38%, #eaf0e6 100%);
+            background: linear-gradient(180deg, #ffffff -24.38%, #eee 100%);
           `}
         >
           <div className={`column is-narrow`}>
@@ -274,7 +242,16 @@ export default ({ data }) => {
               id="validDate"
               className={`${ProductFrontStyles.productOccasions} is-block`}
             ></span>
-            <span id="validInWeeks" css={css`display: none; height: 0; width: 0;`}>{product.frontmatter.valid}</span>
+            <span
+              id="validInWeeks"
+              css={css`
+                display: none;
+                height: 0;
+                width: 0;
+              `}
+            >
+              {product.frontmatter.valid}
+            </span>
           </div>
         </div>
       </div>

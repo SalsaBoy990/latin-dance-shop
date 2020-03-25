@@ -6,7 +6,6 @@ import FeatherIcon from "feather-icons-react"
 
 import SEO from "../../components/SEO"
 import TitleBar from "../../components/title-bar/title-bar.js"
-import NavLink from "../../components/nav-link/nav-link.js"
 import HeaderBar from "../../components/header-bar/header-bar.js"
 import ContactInfo from "../../components/contact-info/contact-info.js"
 import FollowUs from "../../components/follow-us/follow-us.js"
@@ -31,39 +30,7 @@ export default () => {
     <>
       <SEO title={`Terméklista`} pathname={`/shop/`}></SEO>
       <TitleBar>
-        <NavLink to="/shop">Terméklista</NavLink>
-        <NavLink to="/gyakran-ismetelt-kerdesek/">
-          <span>
-            <FeatherIcon
-              icon="help-circle"
-              css={css`
-                width: 18px;
-                height: 18px;
-                stroke: #c5c2ff;
-                stroke-width: 2;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                fill: none;
-                margin-right: 2px;
-                top: 3px;
-                position: relative;
-              `}
-            />
-            Gyakran ismételt kérdések
-          </span>
-        </NavLink>
-        <button
-          className="snipcart-checkout"
-          css={css`
-            position: relative;
-            background-color: #d4f8be;
-            border: none;
-            box-shadow: none;
-            font-size: 15px;
-            color: #474145;
-            cursor: pointer;
-          `}
-        >
+        <button className="snipcart-checkout open-cart-btn">
           <span
             className="is-inline-block"
             css={css`
@@ -72,24 +39,24 @@ export default () => {
             `}
           >
             Kosár
+            <FeatherIcon
+              icon="shopping-cart"
+              css={css`
+                width: 18px;
+                height: 18px;
+                
+                stroke-width: 1.5;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                fill: none;
+                margin-left: 4px;
+                margin-right: 3px;
+                top: 2px;
+                right: 3px;
+                position: relative;
+              `}
+            />
           </span>
-          <FeatherIcon
-            icon="shopping-cart"
-            css={css`
-              width: 18px;
-              height: 18px;
-              stroke: #474145;
-              stroke-width: 1.5;
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              fill: none;
-              margin-left: 4px;
-              margin-right: 3px;
-              top: 2px;
-              right: 3px;
-              position: relative;
-            `}
-          />
           {/* <div
             className="snipcart-cart-header__count"
             css={css`

@@ -1,9 +1,6 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core"
 // eslint-disable-next-line no-unused-vars
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import FeatherIcon from "feather-icons-react"
 
 import SEO from "../components/SEO"
 import TitleBar from "../components/title-bar/title-bar.js"
@@ -13,30 +10,13 @@ import FollowUs from "../components/follow-us/follow-us.js"
 import FooterBar from "../components/footer-bar/footer-bar.js"
 
 export default () => {
+
   return (
     <>
       <SEO title={`Landing oldal`} pathname={`/`}></SEO>
       <TitleBar>
-        <NavLink to="/shop">Terméklista</NavLink>
-        <NavLink to="/gyakran-ismetelt-kerdesek/">
-          <span>
-            <FeatherIcon
-              icon="help-circle"
-              css={css`
-                width: 18px;
-                height: 18px;
-                stroke: #c5c2ff;
-                stroke-width: 2;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                fill: none;
-                margin-right: 2px;
-                top: 3px;
-                position: relative;
-              `}
-            />
-            Gyakran ismételt kérdések
-          </span>
+        <NavLink to="/admin/">
+          Admin
         </NavLink>
       </TitleBar>
       <div className={`bgWhite mt1 mb1`}>
