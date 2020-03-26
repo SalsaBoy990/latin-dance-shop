@@ -45,7 +45,7 @@ collections:
     label: "Oldalak"
     files:
       - label: "Termék leírások, megjegyzések"
-        name: "products"
+        name: "productDetails"
         file: "src/data/products.yaml"
         widget: object
         fields:
