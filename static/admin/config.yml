@@ -42,29 +42,29 @@ collections:
       - { label: "Aktív termék (megjelenik)", name: "active" , widget: "boolean", default: true, required: true }
   
   - name: "pages"
-    label: "Oldalak"
+    label: "Oldaladatok"
     files:
-      - label: "Termék leírások, megjegyzések"
+      - label: "Helyszínek, termékleírás"
         name: "productDetails"
-        file: "src/data/productDetails.yaml"
-        widget: object
+        file: "src/data/siteData.yaml"
         fields:
-          - { label: A termék rövid leírása, name: description, widget: text }
-          - { label: Extra megjegyzés (ha kell), name: additional_info, widget: text}
-      - label: "Helyszín"
-        name: "locations"
-        file: "src/data/locations.yaml"
-        fields:
+          - label: "Termékleírás"
+            name: "product_details"
+            widget: list
+            fields:
+              - { label: A termék rövid leírása, name: description, widget: text }
+              - { label: Extra megjegyzés (ha kell), name: additional_info, widget: text}
+          
           - label: Forma 1 Fitnesz Stúdió
             name: forma1
-            widget: object
+            widget: list
             fields:
               - { label: A helyszín neve, name: location_name, widget: string}
               - { label: A helyszín facebook oldala, name: location_url, widget: string}
               - { label: A helyszín címe, name: location_address, widget: string}
           - label: Online óra
             name: online
-            widget: object
+            widget: list
             fields:
               - { label: A helyszín neve, name: location_name, widget: string}
               - { label: A helyszín facebook oldala, name: location_url, widget: string}

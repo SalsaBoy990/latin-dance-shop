@@ -22,11 +22,12 @@ import ProductFrontStyles from "../components/product-front/product-front.module
 
 export default ({ data }) => {
   const product = data.my_products
-  const defaultDescription = data.pageData.nodes.product_description
-  const additionalInfo = data.pageData.nodes.product_additional_info
+  const defaultDescription = data.pageData.edges[0].node.product_description
+  const additionalInfo = data.pageData.edges[0].node.product_additional_info
+
 
   const locationId = product.frontmatter.location[0]
-  console.log(locationId)
+  // console.log(locationId)
 
   useEffect(() => {
     // console.log(window.Snipcart)
@@ -395,10 +396,14 @@ export const query = graphql`
         }
       }
     }
-    pageData: allProductDetailsYaml(filter: { name: { eq: "productDetails" } }) {
-      nodes {
-        product_description
-        product_additional_info
+    pageData: allDataYaml {
+      edges {
+        node {
+          product_details {
+            product_additional_info
+            product_description
+          }
+        }
       }
     }
   }

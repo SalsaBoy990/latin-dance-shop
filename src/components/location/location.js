@@ -14,28 +14,30 @@ const Location = ({ locationId }) => {
           address
         }
       }
-      forma1: allLocationsYaml(filter: { name: { eq: "forma1" } }) {
-        nodes {
-          location_name
-          location_url
-          location_address
-        }
-      }
-      online: allLocationsYaml(filter: { name: { eq: "online" } }) {
-        nodes {
-          location_name
-          location_url
-          location_address
+      allLocations: allDataYaml {
+        edges {
+          node {
+            forma1 {
+              location_address
+              location_name
+              location_url
+            }
+            online {
+              location_address
+              location_name
+              location_url
+            }
+          }
         }
       }
     }
   `)
 
   const place = data.defaultLocation.siteMetadata
-  const forma1 = data.forma1.nodes[0]
-  const online = data.online.nodes[0]
+  const forma1 = data.allLocations.edges[0].node.forma1
+  const online = data.allLocations.edges[0].node.online
 
-  console.log(online)
+  // console.log(online)
 
   switch (locationId) {
     case "forma1":
