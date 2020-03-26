@@ -46,7 +46,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
         path: path.join(__dirname, `src/data`),
       },
     },
@@ -68,7 +67,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/data`, //path to your media-folder
+        path: `${__dirname}/src/data`, //path to your media-folder
         name: "data"
       }
     },
