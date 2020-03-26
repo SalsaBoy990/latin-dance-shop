@@ -46,13 +46,13 @@ collections:
     files:
       - label: "Termék aloldal"
         name: "product"
-        file: "/static/data/product.yaml"
+        file: "src/data/product.yaml"
         fields:
           - { label: "A termék rövid leírása", name: description, widget: "text" }
           - { label: "Extra megjegyzés (ha kell)", name: additional_info, widget: "text"}
       - label: "Helyszín"
         name: "location"
-        file: "/static/data/location.yaml"
+        file: "src/data/location.yaml"
         fields:
           - label: "Forma 1 Fitnesz Stúdió"
             name: "forma1"
