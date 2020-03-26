@@ -50,21 +50,21 @@ collections:
         fields:
           - label: "Termékleírás"
             name: "product_details"
-            widget: list
+            widget: object
             fields:
               - { label: A termék rövid leírása, name: description, widget: text }
               - { label: Extra megjegyzés (ha kell), name: additional_info, widget: text}
           
           - label: Forma 1 Fitnesz Stúdió
             name: forma1
-            widget: list
+            widget: object
             fields:
               - { label: A helyszín neve, name: location_name, widget: string}
               - { label: A helyszín facebook oldala, name: location_url, widget: string}
               - { label: A helyszín címe, name: location_address, widget: string}
           - label: Online óra
             name: online
-            widget: list
+            widget: object
             fields:
               - { label: A helyszín neve, name: location_name, widget: string}
               - { label: A helyszín facebook oldala, name: location_url, widget: string}
