@@ -137,7 +137,7 @@ export default ({ data }) => {
         `}
       >
         <p className={`${ProductFrontStyles.productDescription} mbhalf`}>
-          {!product.frontmatter.description
+          {product.frontmatter.description
             ? product.frontmatter.description
             : defaultDescription}
         </p>
