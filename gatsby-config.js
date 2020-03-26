@@ -63,14 +63,14 @@ module.exports = {
         path: path.join(__dirname, `src/images`),
       },
     },
-    `gatsby-transformer-yaml`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/data`, //path to your media-folder
+        path: `${__dirname}/static/data`, //path to your media-folder
         name: "data"
       }
     },
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

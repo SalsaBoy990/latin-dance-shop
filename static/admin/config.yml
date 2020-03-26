@@ -44,7 +44,7 @@ collections:
   - name: "pages"
     label: "Oldalak"
     files:
-      - label: "Termék aloldal"
+      - label: "Termék leírások, megjegyzések"
         name: "products"
         file: "static/data/products.yaml"
         widget: object
