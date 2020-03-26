@@ -35,23 +35,23 @@ module.exports = {
         ],
       },
     },
-    
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/images/uploads`, //path to your media-folder
-        name: "media"
-      }
-    },
 
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/data`, //path to your media-folder
-        name: "data"
-      }
+        path: `${__dirname}/src/images/uploads`, //path to your media-folder
+        name: "media",
+      },
     },
-   `gatsby-transformer-yaml`,
+
+    `gatsby-transformer-yaml`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data`, //path to your media-folder
+        name: "data",
+      },
+    },
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -72,9 +72,9 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/data`, //path to your media-folder
-        name: "data"
-      }
+        path: `${__dirname}/src/data`, //path to your media-folder
+        name: "data",
+      },
     },
 
     {
@@ -114,7 +114,7 @@ module.exports = {
     },
 
     `gatsby-plugin-react-helmet`,
-    //  `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
 
     {
       resolve: "gatsby-plugin-snipcartv3",

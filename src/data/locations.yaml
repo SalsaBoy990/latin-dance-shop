@@ -1,0 +1,8 @@
+- name: "forma1"
+  location_name: "Forma 1 Fitnesz Stúdió"
+  location_url: "https://www.facebook.com/formaegyfitnesz/"
+  location_address: "6722 Szeged, Attila u. 17–19. legfelső em."
+- name: "online"
+  location_name: "Online óra (élő videóközvetítés)"
+  location_url: "https://example.com/"
+  location_address: ""

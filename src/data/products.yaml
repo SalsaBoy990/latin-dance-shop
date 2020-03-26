@@ -1,0 +1,5 @@
+# A termékek fölött szereplő tájékoztató szöveg módosítható
+- name: "products"
+  product_description: >
+    Erre a kurzusra előzetes tánctudás nélkül is lehet jönni, vagy újrakezdőként.
+  product_additional_info: ""
