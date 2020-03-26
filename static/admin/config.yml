@@ -52,7 +52,7 @@ collections:
           - { label: Extra megjegyzés (ha kell), name: additional_info, widget: text}
       - label: "Helyszín"
         name: "location"
-        file: "src/data/location.yaml"
+        file: "src/data/locations.yaml"
         fields:
           - label: Forma 1 Fitnesz Stúdió
             name: forma1
