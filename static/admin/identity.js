@@ -1,4 +1,4 @@
-if (window.netlifyIdentity) {
+;if (window.netlifyIdentity) {
   window.netlifyIdentity.on('init', function (user) {
     if (!user) {
       window.netlifyIdentity.on('login', function () {

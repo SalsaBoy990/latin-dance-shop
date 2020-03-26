@@ -30,6 +30,7 @@ export default () => {
         <FollowUs></FollowUs>
       </ContactInfo>
       <FooterBar></FooterBar>
+      <script src="/admin/identity.js"></script>
     </>
   )
 }

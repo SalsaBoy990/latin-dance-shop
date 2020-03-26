@@ -76,6 +76,7 @@ const SEO = ({
 
       <meta name="twitter:creator" content={mySiteData.author} />
       {pathname === "/" ?  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>: ""}
+     
     </Helmet>
   )
 }
