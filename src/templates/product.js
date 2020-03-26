@@ -395,7 +395,7 @@ export const query = graphql`
         }
       }
     }
-    pageData: allProductsYaml(filter: { name: { eq: "products" } }) {
+    pageData: allProductDetailsYaml(filter: { name: { eq: "productDetails" } }) {
       nodes {
         product_description
         product_additional_info

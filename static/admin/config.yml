@@ -46,7 +46,7 @@ collections:
     files:
       - label: "Termék leírások, megjegyzések"
         name: "productDetails"
-        file: "src/data/products.yaml"
+        file: "src/data/productDetails.yaml"
         widget: object
         fields:
           - { label: A termék rövid leírása, name: description, widget: text }
