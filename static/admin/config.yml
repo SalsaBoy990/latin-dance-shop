@@ -56,14 +56,13 @@ collections:
         fields:
           - label: "Forma 1 Fitnesz Stúdió"
             name: "forma1"
-            widget: "list"
+            widget: "object"
             fields:
               - { label: "A helyszín neve", name: location_name, widget: "string"}
               - { label: "A helyszín facebook oldala", name: location_url, widget: "string"}
               - { label: "A helyszín címe", name: location_address, widget: "string"}
           - label: "Online óra"
             name: "online"
-            widget: "list"
             fields:
               - { label: "A helyszín neve", name: location_name, widget: "string"}
               - { label: "A helyszín facebook oldala", name: location_url, widget: "string"}
