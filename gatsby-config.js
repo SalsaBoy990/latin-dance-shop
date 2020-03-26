@@ -35,6 +35,7 @@ module.exports = {
         ],
       },
     },
+    
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -42,7 +43,16 @@ module.exports = {
         name: "media"
       }
     },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/data`, //path to your media-folder
+        name: "data"
+      }
+    },
    `gatsby-transformer-yaml`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -57,6 +67,8 @@ module.exports = {
         path: path.join(__dirname, `src/images`),
       },
     },
+
+    `gatsby-transformer-yaml`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -64,7 +76,7 @@ module.exports = {
         name: "data"
       }
     },
-    `gatsby-transformer-yaml`,
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -83,7 +95,9 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     `gatsby-plugin-transition-link`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -98,8 +112,10 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
+
     `gatsby-plugin-react-helmet`,
     //  `gatsby-plugin-offline`,
+
     {
       resolve: "gatsby-plugin-snipcartv3",
       options: {
@@ -109,6 +125,7 @@ module.exports = {
         styles: false,
       },
     },
+
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

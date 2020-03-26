@@ -14,14 +14,14 @@ const Location = ({ locationId }) => {
           address
         }
       }
-      forma1: allLocationYaml(filter: { name: { eq: "forma1" } }) {
+      forma1: allLocationsYaml(filter: { name: { eq: "forma1" } }) {
         nodes {
           location_name
           location_url
           location_address
         }
       }
-      online: allLocationYaml(filter: { name: { eq: "online" } }) {
+      online: allLocationsYaml(filter: { name: { eq: "online" } }) {
         nodes {
           location_name
           location_url
