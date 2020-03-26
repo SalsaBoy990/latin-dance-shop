@@ -22,6 +22,11 @@ import ProductFrontStyles from "../components/product-front/product-front.module
 
 export default ({ data }) => {
   const product = data.my_products
+  const defaultDescription = data.pageData.nodes.product_description
+  const additionalInfo = data.pageData.nodes.product_additional_info
+
+  const locationId = product.frontmatter.location[0]
+  console.log(locationId)
 
   useEffect(() => {
     // console.log(window.Snipcart)
@@ -71,7 +76,11 @@ export default ({ data }) => {
       <SEO
         title={product.frontmatter.title}
         pathname={product.fields.slug}
-        description={product.frontmatter.description}
+        description={
+          product.frontmatter.description !== ""
+            ? product.frontmatter.description
+            : defaultDescription
+        }
       ></SEO>
       <TitleBar>
         <button className="snipcart-checkout open-cart-btn">
@@ -100,18 +109,6 @@ export default ({ data }) => {
               position: relative;
             `}
           />
-          {/* <div
-            className="snipcart-cart-header__count"
-            css={css`
-              color: #f20b97;
-              font-size: 13px;
-              font-weight: 600;
-              position: absolute;
-              top: 6px;
-              right: 6px;
-            `}
-          >
-          </div> */}
         </button>
       </TitleBar>
 
@@ -138,9 +135,12 @@ export default ({ data }) => {
           margin-bottom: 30px;
         `}
       >
-        <p className={ProductFrontStyles.productDescription}>
-          {product.frontmatter.description}
+        <p className={`${ProductFrontStyles.productDescription} mbhalf`}>
+          {!product.frontmatter.description
+            ? product.frontmatter.description
+            : defaultDescription}
         </p>
+        {additionalInfo ? <p>{additionalInfo}</p> : ""}
       </div>
 
       <div className="container mr-responsive ml-responsive m-mr0 mt1">
@@ -256,7 +256,7 @@ export default ({ data }) => {
         </div>
       </div>
 
-      <Location></Location>
+      <Location locationId={locationId}></Location>
 
       <Container>
         <div
@@ -382,6 +382,7 @@ export const query = graphql`
         recipients
         occasions
         facebook_event
+        location
         valid
         cover_image {
           publicURL
@@ -392,6 +393,12 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    pageData: allProductYaml(filter: { name: { eq: "product" } }) {
+      nodes {
+        product_description
+        product_additional_info
       }
     }
   }

@@ -30,12 +30,41 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Termék neve", name: "title" , widget: "string", required: true }
-      - { label: "Rövid leírás", name: "description" , widget: "text", required: true }
+      - { label: "Rövid leírás", name: "description" , widget: "text", required: false, default: "" }
       - { label: "Időpont (a hét napja, mettől meddig)", name: "date" , widget: "string", required: true }
       - { label: "Ár", name: "price" , widget: "number", valueType: "int", default: 4800, min: 1000, step: 100, required: true }
       - { label: "Alkalmak száma", name: "occasions" , widget: "number", valueType: "int", min: 1, required: true }
       - { label: "Hány hétig érvényes?", name: "valid" , widget: "number", valueType: "int", default: 5, min: 5, max: 6, required: true }
       - { label: "Hány fő részére?", name: "recipients" , widget: "number", valueType: "int", min: 1, max: 2, required: true }
       - { label: "Facebook eseménylink", name: "facebook_event" , widget: "string", required: true }
+      - { label: "Helyszín", name: "location" , widget: "select", required: true, multiple: false, options: ["forma1", "online"] }
       - { label: "Borítókép", name: "coverImage" , widget: "image", required: true }
       - { label: "Aktív termék (megjelenik)", name: "active" , widget: "boolean", default: true, required: true }
+  
+  - name: "pages"
+    label: "Oldalak"
+    files:
+      - label: "Termék aloldal"
+        name: "product"
+        file: "/static/data/product.yaml"
+        fields:
+          - { label: "A termék rövid leírása", name: description, widget: "text" }
+          - { label: "Extra megjegyzés (ha kell)", name: additional_info, widget: "text"}
+      - label: "Helyszín"
+        name: "location"
+        file: "/static/data/location.yaml"
+        fields:
+          - label: "Forma 1 Fitnesz Stúdió"
+            name: "forma1"
+            widget: "list"
+            fields:
+              - { label: "A helyszín neve", name: location_name, widget: "string"}
+              - { label: "A helyszín facebook oldala", name: location_url, widget: "string"}
+              - { label: "A helyszín címe", name: location_address, widget: "string"}
+          - label: "Online óra"
+            name: "online"
+            widget: "list"
+            fields:
+              - { label: "A helyszín neve", name: location_name, widget: "string"}
+              - { label: "A helyszín facebook oldala", name: location_url, widget: "string"}
+              - { label: "A helyszín címe", name: location_address, widget: "string"}

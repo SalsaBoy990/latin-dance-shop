@@ -8,6 +8,8 @@ occasions: 4
 valid: 6
 recipients: 1
 facebook_event: "https://www.facebook.com/events/900492787052074/"
+location:
+  - "online"
 cover_image: "../images/uploads/dominikai-bachata.jpg"
 active: true
 ---

@@ -42,6 +42,14 @@ module.exports = {
         name: "media"
       }
     },
+   `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, `static/data`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -55,6 +63,14 @@ module.exports = {
         name: `images`,
         path: path.join(__dirname, `src/images`),
       },
+    },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/data`, //path to your media-folder
+        name: "data"
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
